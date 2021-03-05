@@ -1,0 +1,36 @@
+<section id="search-results" class="layout listing event list">
+	<div class="component intro">
+		<h1 class="h2 subtitle">Search Results</h1>
+	</div>
+	<div class="wrapper">
+		<!-- <h1 class="style-title">Search Results</h1> -->
+		<div class="row">
+			<div class="filter-wrapper">
+				@@include('../inc/component-search.html')
+			</div>
+			<ul class="item-list">
+				<li class="item" v-for="n in 1">
+					@@include('listing-event.html')
+				</li>
+				<li class="item" v-for="n in 1">
+					@@include('listing-page.html')
+				</li>
+				<li class="item" v-for="n in 1">
+					@@include('listing-location.html')
+				</li>
+				<li class="item" v-for="n in 1">
+					@@include('listing-blog.html')
+				</li>
+				<li class="item" v-for="n in 1">
+					@@include('listing-pdf.html')
+				</li>
+				<li class="item" v-for="n in 1">
+					@@include('listing-person.html')
+				</li>
+			</ul>
+			<div class="pagination buttons center">
+				<a class="btn" href="javascript:void(0)"><span>More Results</span></a>
+			</div>
+		</div>
+	</div>
+</section>

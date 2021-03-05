@@ -1,0 +1,19 @@
+<section id="listing-faq-list" class="layout listing faqs list">
+	<div class="wrapper">
+		<h2 class="style-title">Listing - FAQ (list)</h2>
+		<div class="row">
+			<div class="intro">
+				<h1 class="h2 subtitle">You Asked. We Answered.</h1>
+				<!-- <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> -->
+			</div>
+			<div class="filter-wrapper">
+				@@include('../inc/component-faq-search.html')
+			</div>
+			<ul class="item-list">
+				<li class="item" v-for="n in 8">
+					@@include('../items/item-faq.html')
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

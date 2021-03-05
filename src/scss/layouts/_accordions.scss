@@ -1,0 +1,319 @@
+.layout.accordion {
+	// Global
+	.intro,
+	.description {
+		max-width: 860px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.intro .wrapper {
+		@media screen and (max-width: 920px) {
+			padding: 0 30px;
+		}
+	}
+	.intro + .wrapper,
+	.description + .wrapper {
+		padding-top: 60px;
+	}
+	details > summary::-webkit-details-marker {
+		display: none;
+	}
+	&.tab-view {
+		.row {
+			@media screen and (min-width: 860px) {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+			}
+			.col {
+				@media screen and (min-width: 860px) {
+					flex: 1 0 50%;
+				}
+				&:first-child {
+					display: none;
+					@media screen and (min-width: 860px) {
+						display: block;
+					}
+				}
+				&:last-child {
+					@media screen and (min-width: 860px) {
+						padding-top: 45px;
+					}
+				}
+			}
+		}
+		.accordion-menus {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		.accordion-title {
+			display: inline-block;
+			margin-right: 30px;
+			margin-bottom: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			color: $medium-gray;
+			transition: color $base-duration $base-timing;
+			flex: 0 0 auto;
+			order: 1;
+			&:hover,
+			&.active {
+				color: $action-color;
+			}
+			&:first-child {
+				padding-right: 30px;
+				border-right: 1px solid $action-color;
+			}
+		}
+		.accordion-menu {
+			position: absolute;
+			top: auto;
+			left: 0;
+			padding-top: 30px;
+			opacity: 0;
+			z-index: -1;
+			flex: 1 0 100%;
+			order: 2;
+			@media screen and (max-width: 859px) {
+				display: none;
+			}
+			&.active {
+				position: relative;
+				opacity: 1;
+				z-index: 1;
+			}
+			.accordion-nav-item {
+				margin-bottom: 10px;
+				a {
+					color: $base-font-color;
+					&:hover {
+						color: $action-color;
+					}
+				}
+				&.active a {
+					color: $action-color;
+				}
+			}
+		}
+		.accordion-menu,
+		.accordion-groups {
+			@media screen and (min-width: 860px) {
+				border-top: 1px solid $action-color;
+			}
+		}
+		.accordion-groups {
+			position: relative;
+			@media screen and (min-width: 860px) {
+				padding-top: 35px;
+			}
+		}
+		.accordion-group {
+			@media screen and (min-width: 860px) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				padding-bottom: 30px;
+			}
+			&.active {
+				@media screen and (min-width: 860px) {
+					position: relative;
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+			summary {
+				@media screen and (max-width: 859px) {
+					position: relative;
+					padding: 10px 0 3px;
+				    margin-bottom: 0;
+				    border-bottom: 1px solid $gold;
+					font-family: $base-font-family;
+					color: $gold;
+					cursor: pointer;
+					&:after {
+						position: absolute;
+						right: 15px;
+						display: inline-block;
+						font-style: normal;
+						font-variant: normal;
+						text-rendering: auto;
+						font-weight: 300;
+						font-family: 'Font Awesome 5 Regular';
+						-webkit-font-smoothing: antialiased;
+						content: "\f067";
+						transition: all $base-duration $base-timing;
+					}
+				}
+				@media screen and (min-width: 860px) {
+					font-size: 40px;
+					line-height: 1.1;
+					font-family: $heading-font-family;
+					color: $action-color;
+				}
+			}
+			details {
+				@media screen and (min-width: 860px) {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					z-index: 0;
+					transition: opacity $base-duration $base-timing;
+				}
+				&.active {
+					@media screen and (min-width: 860px) {
+						position: relative;
+						opacity: 1;
+						z-index: 1;
+						transition: opacity $base-duration $base-timing;
+					}
+				}
+			}
+		}
+		.accordion-item.active {
+			summary:after {
+				@media screen and (max-width: 859px) {
+					transform: rotate(45deg);
+				}
+			}
+		}
+		.accordion-content {
+			@media screen and (max-width: 859px) {
+				display: none;
+			}
+		}
+	}
+	&.list-view {
+		.col {
+			&:first-child {
+				display: none;
+			}
+		}
+		summary {
+			position: relative;
+			padding: 10px 0 3px;
+		    margin-bottom: 0;
+		    border-bottom: 1px solid $gold;
+			font-family: $base-font-family;
+			color: $gold;
+			cursor: pointer;
+			&:after {
+				position: absolute;
+				right: 15px;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				font-weight: 300;
+				font-family: 'Font Awesome 5 Regular';
+				-webkit-font-smoothing: antialiased;
+				content: "\f067";
+				transition: all $base-duration $base-timing;
+			}
+		}
+		.accordion-item.active {
+			summary:after {
+				transform: rotate(45deg);
+			}
+		}
+		.accordion-content {
+			display: none;
+		}
+	}
+
+	&.tab-view-backup {
+		.accordion-menu {
+			margin-bottom: 25px;
+			.accordion-title {
+				display: inline;
+				margin-right: 30px;
+				a {
+					border-bottom: 2px solid;
+					color: $medium-gray;
+					transition: color $base-duration $base-timing;
+					&:hover {
+						color: $action-color;
+					}
+				}
+				&.active {
+					a {
+						color: $action-color;
+					}
+				}
+			}
+		}
+		.accordions {
+			position: relative;
+		}
+		.accordion-wrapper {
+			position: absolute;
+			top: 0;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			.accordion-nav,
+			.accordion-group {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: 0;
+				flex: 1 0 50%;
+			}
+			&.active {
+				position: relative;
+				z-index: 1;
+				.accordion-nav,
+				.accordion-group {
+					position: relative;
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+			.accordion-nav {
+				.hidden {
+					position: absolute;
+					left: -10000px;
+					top: auto;
+					width: 1px;
+					height: 1px;
+					overflow: hidden;
+				}
+				.accordion-nav-item {
+					margin-bottom: 10px;
+					a {
+						color: $base-font-color;
+						&:hover {
+							color: $action-color;
+						}
+					}
+					&.active a {
+						color: $action-color;
+					}
+				}
+			}
+			.accordion-group {
+				padding-bottom: 30px;
+				details {
+					position: absolute;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					z-index: 0;
+					transition: opacity $base-duration $base-timing;
+					&.active {
+						position: relative;
+						opacity: 1;
+						z-index: 1;
+						transition: opacity $base-duration $base-timing;
+					}
+				}
+			}
+		}
+	}
+}

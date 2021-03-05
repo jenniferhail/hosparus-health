@@ -1,0 +1,23 @@
+<section id="cards-3" class="layout cards col-3 text-align-left background">
+	<h2 class="style-title">Cards - 3 Column</h2>
+
+	<div class="component intro">
+		<div class="wrapper">
+			<h1 class="h2 subtitle">Card Layout</h1>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="row">
+			<div class="col">
+				<div class="content-wrapper">
+					<ul class="item-list">
+						<li class="item" v-for="n in 3">
+							@@include('card-item.html')
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

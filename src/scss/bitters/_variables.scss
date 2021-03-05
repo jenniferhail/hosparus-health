@@ -1,0 +1,62 @@
+// Breakpoints
+$laptop: "min-width: 1260px";
+$tablet: "min-width: 760px";
+$mobile-lg: "min-width: 540px";
+$mobile-sm: "min-width: 480px";
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,700i&display=swap');
+$base-font-family: 'Nunito Sans', sans-serif;
+$heading-font-family: 'Butler';
+
+// Line height
+$base-line-height: 1.75;
+$heading-line-height: 1.2;
+
+// Font Weight
+$base-font-weight: 400;
+$heading-font-weight: $base-font-weight;
+
+// Other Sizes
+$base-border-radius: 0;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$clear: rgba(0,0,0,0);
+$gold: #ac8435;
+$gold-fade: rgba(172,132,53,0.6);
+$navy: #4b6079;
+
+$blue: #ac8435;
+$light-blue: #fff;
+$red: #fff;
+$tan: #f8f1e3;
+$white: #ffffff;
+$dark-gray: #596268;
+$medium-gray: #b4b8bb;
+
+$light-gray: #ddd;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $gold;
+
+// Border
+$base-border-color: $gold;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+$drop-shadow: 1px 0px 10px 3px rgba(0,0,0,0.08);
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 300ms;
+$base-timing: ease-in-out;

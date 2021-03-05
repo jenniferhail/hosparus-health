@@ -1,0 +1,65 @@
+@@include('inc/header.html')
+
+<div id="app" class="page">
+
+	@@include('style-guide/filter-post-types.html')
+
+	<!-- Instead of including the layout, I'm dropping in the code, so I can tweak things a bit for this static blog page. -->
+	<!-- @@include('layouts/listing-article-slider.html') -->
+	<section id="listing-article-slider" class="layout listing post carousel background">
+		<div class="component intro">
+			<h1 class="h2 subtitle">Blog Articles</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<ul class="item-list">
+					<li class="item" v-for="n in 6">
+						@@include('layouts/article-item.html')
+					</li>
+				</ul>
+				<div class="buttons footer">
+					<a href="javascript:void(0)" class="btn"><span>See All Articles<span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="listing-article-slider" class="layout listing post video carousel background">
+		<div class="component intro">
+			<h1 class="h2 subtitle">Blog Videos</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<ul class="item-list">
+					<li class="item" style="background-image: url('assets/img/iStock-948761784.jpg');" v-for="n in 6">
+						@@include('layouts/video-item.html')
+					</li>
+				</ul>
+				<div class="buttons footer">
+					<a href="javascript:void(0)" class="btn"><span>See All Videos<span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="listing-article-slider" class="layout listing post carousel background">
+		<div class="component intro">
+			<h1 class="h2 subtitle">Case Studies</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<ul class="item-list">
+					<li class="item" v-for="n in 6">
+						@@include('layouts/case-study-item.html')
+					</li>
+				</ul>
+				<div class="buttons footer">
+					<a href="javascript:void(0)" class="btn"><span>See All Case Studies<span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@@include('inc/footer.html')

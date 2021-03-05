@@ -1,0 +1,84 @@
+.layout.wizard {
+	margin-bottom: 0;
+	.wrapper {
+		width: 80vw;
+		max-width: 980px;
+		margin: 40px;
+		padding: 80px 60px 60px;
+		background-color: #f8f1e3;
+	}
+	.icon .leaf {
+		width: 100px;
+		margin: 0 auto 30px;
+	}
+	.col {
+		width: 100%;
+		max-width: 860px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.question {
+		display: none;
+		&.active {
+			display: block;
+		}
+		&.first.active ~ .controls .btn.back {
+			display: none;
+		}
+	}
+	.answer {
+		&.selected {
+			background-color: $action-color;
+			border: 1px solid $action-color;
+			color: $white;
+		}
+	}
+	.buttons.answers {
+		li {
+			flex: 1 0 50%;
+			text-align: center;
+		}
+	}
+	.message {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 90px;
+		padding: 20px 0 0;
+	}
+	button {
+		margin: 0 10px;
+		padding: 0;
+		background-color: $clear;
+	}
+	.btn + .btn {
+		margin-left: 10px;
+	}
+}
+
+.page-template-wizard {
+	.layout.hero.style-cards {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	.fancybox-content {
+		padding: 0;
+	}
+}
+
+.results {
+	.layout {
+		display: none;
+		&:last-of-type {
+			margin-bottom: 100px;
+		}
+		&.active {
+			display: block;
+		}
+	}
+	.buttons.restart {
+		margin-bottom: 140px;
+	}
+}

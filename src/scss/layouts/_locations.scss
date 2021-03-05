@@ -1,0 +1,101 @@
+.layout.locations.map {
+	.row {
+		@media screen and (min-width: 760px) {
+			display: flex;
+			flex-direction: row-reverse;
+			flex-wrap: nowrap;
+		}
+		.col {
+			@media screen and (min-width: 760px) {
+				width: 50%;
+				margin: 0 22.5px;
+			}
+			&:first-child {
+				@media screen and (min-width: 760px) {
+					margin-right: 0;
+				}
+			}
+			&:last-child {
+				@media screen and (min-width: 760px) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.fieldset.search-bar {
+	    padding-top: 30px;
+	}
+	.error-message {
+		padding-top: 20px;
+		font-style: italic;
+		line-height: 1.1;
+		color: $base-font-color;
+	}
+	.map-wrapper,
+	.map-canvas {
+		height: 400px;
+		@media screen and (min-width: 760px) {
+			// height: 100%;
+			height: 500px;
+		}
+	}
+	.map-wrapper {
+		@media screen and (max-width: 759px) {
+			padding-top: 30px;
+		}
+	}
+	.map-canvas {
+		background-color: $tan;
+	}
+	.marker {
+		position: absolute;
+		cursor: pointer;
+	}
+	// Window box
+	.gm-style .gm-style-iw-c {
+		border-radius: 0;
+		padding: 15px 30px 5px 15px!important;
+	}
+	.gm-style .gm-style-iw-t::after {
+		background: none;
+		box-shadow: none;
+	}
+	// Close button
+	.gm-ui-hover-effect {
+		width: auto !important;
+		height: auto !important;
+		top: 0 !important;
+		right: 0 !important;
+		img {
+			width: auto !important;
+			height: auto !important;
+			margin: 0 !important;
+			padding: 10px !important;
+		}
+	}
+	.marker-window {
+		.marker-title {
+			display: block;
+			margin-bottom: 0;
+		}
+		.links {
+			padding-top: 10px;
+		    font-weight: 400;
+			a:first-child {
+				margin-right: 5px;
+			}
+			a:last-child {
+				margin-left: 5px;
+			}
+		}
+	}
+	.caption {
+		text-align: center;
+		@media screen and (max-width: 759px) {
+			padding: 15px 30px 0;
+		}
+		@media screen and (min-width: 760px) {
+			padding: 15px 60px 0;
+		}
+	}
+}

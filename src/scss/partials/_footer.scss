@@ -1,0 +1,252 @@
+$breakpoint-footer-small: "max-width: 929px";
+$breakpoint-footer-large: "min-width: 930px";
+
+footer.footer {
+	@media screen and ($breakpoint-footer-small) {
+		padding-top: 45px;
+	}
+	.row {
+		@media screen and ($breakpoint-footer-large) {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-end;
+		}
+	}
+	.flex-col,
+	.row-1 {
+		@media screen and ($breakpoint-footer-small) {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+	.row-1 {
+		margin-bottom: 15px;
+		@media screen and ($breakpoint-footer-large) {
+			margin-bottom: 45px;
+		}
+		.col-left {
+			@media screen and ($breakpoint-footer-small) {
+				order: 3;
+				text-align: center;
+			}
+			@media screen and ($breakpoint-footer-large) {
+				flex: 0 0 18%;
+			}
+		}
+		.col-center {
+			flex: 0 0 60%;
+			text-align: center;
+			@media screen and ($breakpoint-footer-small) {
+				order: 1;
+			}
+			@media screen and (min-width: 980px) {
+				padding: 0 30px;
+			}
+		}
+		.col-right {
+			padding-top: 30px;
+			@media screen and ($breakpoint-footer-small) {
+				order: 2;
+			}
+			@media screen and ($breakpoint-footer-large) {
+				flex: 0 0 18%;
+				text-align: right;
+			}
+		}
+	}
+	.row-2 {
+		background-color: $medium-gray;
+		padding-top: 15px;
+		@media screen and ($breakpoint-footer-large) {
+			padding: 30px 0 15px;
+		}
+		.wrapper {
+			@media screen and ($laptop) {
+				margin: auto 0;
+			}
+		}
+	}
+	.col {
+		font-size: 14px;
+	}
+	.footer-menu {
+		margin-bottom: 15px;
+		@media screen and (min-width: 450px) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		li {
+			display: block;
+			margin: 0 5px;
+			&:after {
+				@media screen and (min-width: 450px) {
+					content: '|';
+					display: inline;
+					margin-left: 7px;
+					color: $gold;
+				}
+			}
+			&:last-child:after {
+				content: none;
+			}
+			a {
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				&:hover {
+					color: $base-font-color;
+				}
+			}
+		}
+	}
+	.social {
+		margin-bottom: 20px;
+		@media screen and ($breakpoint-footer-small) {
+			justify-content: center;
+		}
+		li a {
+			color: $medium-gray;
+			transition: color $base-duration $base-timing;
+			&:hover {
+				color: $action-color;
+			}
+		}
+	}
+	.footer-logo,
+	.mightily-logo {
+		display: block;
+	}
+	.footer-logo {
+		width: 300px;
+		margin: 0 auto 20px;
+		svg {
+			width: 100%;
+			max-height: 105px;
+		}
+	}
+	// Mightily Logo
+	#mtbSvg {
+		display: block;
+		text-align: center;
+		opacity: 1;
+		transition: opacity $base-duration $base-timing;
+		@media screen and ($breakpoint-footer-large) {
+			display: inline;
+			text-align: right;
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+		#mtbIcon {
+			fill: $medium-gray;
+			opacity: 1;
+		}
+	}
+	.copyright {
+	    margin-top: 0;
+		color: $gold;
+	}
+	.disclaimer {
+		max-width: 400px;
+		margin: 0 auto 15px;
+		text-align: center;
+		color: $medium-gray;
+		@media screen and ($breakpoint-footer-large) {
+			text-align: left;
+		}
+	}
+	.footer-logos {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		.logo {
+			margin: calc(15px/2);
+			@media screen and (min-width: 730px) {
+				margin: 15px;
+			}
+			a {
+				display: block;
+			}
+			img {
+				height: 50px;
+			}
+		}
+	}
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	.label {
+		margin-left: 0;
+		color: $gold;
+		font-size: 20px;
+		font-family: $heading-font-family;
+	}
+	li {
+		display: block;
+		margin: 0 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			font-size: 20px;
+		}
+	}
+}
+
+#google_translate_element {
+	margin-bottom: 30px;
+}
+
+.layout.newsletter {
+	.intro {
+		text-align: center;
+		.wrapper {
+			max-width: 1000px;
+			padding: 0 30px;
+		}
+	}
+	.content {
+		position: relative;
+		max-width: 900px;
+		margin: 0 auto;
+		padding-top: 45px;
+	}
+	.story-line {
+		top: -16px;
+		&:after {
+			width: 100%;
+			height: 1px;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.call-hosparus-popup,
+.search-popup {
+	padding: 50px 30px;
+	@media screen and (min-width: 540px) {
+		padding: 100px 60px;
+	}
+	.subtitle {
+		margin-bottom: 15px;
+	}
+	.p {
+		max-width: 500px;
+		margin: 0 auto 30px;
+	}
+	.buttons {
+		padding-top: 40px;
+		.btn {
+			@include heading-style($h2-font-size, $h2-line-height);
+			@include btn-draw($gold, $white, 1px);
+		}
+	}
+}

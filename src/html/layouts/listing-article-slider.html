@@ -1,0 +1,50 @@
+<section id="listing-article-slider" class="layout listing locations carousel background">
+	<div class="component intro">
+		<h1 class="h2 subtitle">Listing Layout - Locations</h1>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="item-list">
+				<div class="item" v-for="n in 6">
+					@@include('listing-location.html')
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="listing-article-slider" class="layout listing post carousel background">
+	<div class="component intro">
+		<h1 class="h2 subtitle">You’re in the comfort of others.</h1>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="item-list">
+				<div class="item" v-for="n in 6">
+					@@include('article-item.html')
+				</div>
+			</div>
+			<div class="buttons footer">
+				<a href="javascript:void(0)" class="btn"><span>See All Articles<span></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="listing-article-slider-2" class="layout listing post carousel background">
+	<div class="component intro">
+		<h1 class="h2 subtitle">You’re in the comfort of others.</h1>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="item-list">
+				<div class="item" v-for="n in 6">
+					@@include('article-item.html')
+				</div>
+			</div>
+			<!-- <div class="buttons footer">
+				<a href="javascript:void(0)" class="btn"><span>See All Articles<span></a>
+			</div> -->
+		</div>
+	</div>
+</section>

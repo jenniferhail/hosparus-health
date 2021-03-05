@@ -1,0 +1,70 @@
+@@include('inc/header.html')
+
+<div id="app" class="page">
+
+	<section class="layout single profile">
+		<div class="wrapper">
+
+			<article class="row">
+
+				<div class="float">
+					<div class="image-wrapper">
+						<div class="background-image" style="background-image: url('assets/img/iStock-906043636.jpg');">
+							<img class="visually-hide-image" src="assets/img/iStock-906043636.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="heading">
+					<ul class="details one-line">
+						<li><h1 class="h2 title">Persons Name Here</h1></li>
+						<li><a href="javascript:void(0)" class="p">Category Title</a></li>
+					</ul>
+					<ul class="social">
+						<li class="label">Connect</li>
+						<li><a href="#"><i class="fas fa-envelope"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="content">
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum.</p>
+					<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+				</div>
+
+			</article>
+
+			<div class="pagination buttons">
+				<a class="btn" href="javascript:void(0)"><span>Back to Executive Team</span></a>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- Related articles slider -->
+	<!-- @@include('layouts/listing-article-slider.html') -->
+	<section id="listing-article-slider" class="layout listing post carousel background story-line-bottom">
+		<div class="component intro">
+			<h1 class="h2 subtitle">Articles By Employee</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="item-list">
+					<div class="item" v-for="n in 6">
+						@@include('layouts/article-item.html')
+					</div>
+				</div>
+				<div class="buttons center">
+					<a href="javascript:void(0)" class="btn"><span>See All Articles<span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@@include('inc/footer.html')

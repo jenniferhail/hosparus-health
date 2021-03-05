@@ -1,0 +1,22 @@
+/*!
+ * mightily v2.0.0
+ * Doing less to make more.
+ * (c) 2021 Chris Miller
+ * MIT License
+ * https://bitbucket.org/mightily/theme-development/src/master/
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-display: block;
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fontawesome-pro-brands-900.eot");
+  src: url("../fonts/fontawesome-pro-brands-900.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-pro-brands-900.woff2") format("woff2"), url("../fonts/fontawesome-pro-brands-900.woff") format("woff"), url("../fonts/fontawesome-pro-brands-900.ttf") format("truetype"), url("../fonts/fontawesome-pro-brands-900.svg#fontawesome") format("svg");
+}
+
+/* line 16, src/scss/vendor/fontawesome/fontawesome-pro-brands.scss */
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+  font-weight: 900;
+}

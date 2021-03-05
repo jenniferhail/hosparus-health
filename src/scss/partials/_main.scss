@@ -1,0 +1,162 @@
+// Base Settings
+// .page,
+// .layouts {
+body {
+	padding-top: calc(60px + 103px);
+	@media screen and (min-width: 1059px) {
+		padding-top: calc(60px + 133px);
+	}
+	&.home {
+		padding-top: 82px;
+		@media screen and (min-width: 451px) {
+			padding-top: 103px;
+		}
+		@media screen and (min-width: 1059px) {
+			padding-top: 133px;
+		}
+	}
+	// Policy & Advocacy Page
+	&.page-id-1433 {
+		.layout.basic-content.col-1 .content {
+			max-width: 900px;
+		}
+	}
+
+	&.stopScroll {
+		overflow: hidden;
+	}
+	&.page-id-1989 {
+		.layout.listing {
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 100px;
+				@media screen and ($tablet) {
+					margin-bottom: 200px;
+				}
+			}
+		}
+	}
+}
+.layout {
+    // margin-bottom: 140px;
+	margin-bottom: 100px;
+	@media screen and ($tablet) {
+		// margin-bottom: 240px;
+		margin-bottom: 200px;
+	}
+	&.story-line-top,
+	&.story-line-bottom {
+		.row {
+			position: relative;
+		}
+		+ .layout {
+			padding-top: 60px;
+		}
+	}
+	&.story-line-top .row:before,
+	&.story-line-bottom .row:after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 120px;
+		position: absolute;
+		left: calc(50% - 0.5px);
+		background-color: $gold;
+		z-index: 1;
+	}
+	&.story-line-top {
+		.row:before {
+			top: -60px;
+			@media screen and (min-width: 540px) {
+				height: 220px;
+				top: -140px;
+			}
+		}
+	}
+	&.story-line-bottom {
+		.row:after {
+			bottom: -60px;
+			@media screen and (min-width: 540px) {
+				// height: 160px;
+				// bottom: -80px;
+				height: 220px;
+				bottom: -140px;
+			}
+		}
+	}
+	&.newsletter {
+		.description {
+			text-align: center;
+		}
+	}
+	&.basic-content {
+		&.story-line-top {
+			.row:before {
+				width: 0;
+				height: 0;
+			}
+			.intro .wrapper:before {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 120px;
+				position: absolute;
+				left: calc(50% - 0.5px);
+				background-color: $gold;
+				z-index: 1;
+
+				top: -60px;
+				@media screen and (min-width: 540px) {
+					height: 220px;
+					top: -140px;
+				}
+			}
+		}
+	}
+}
+
+[type="checkbox"] {
+	+ label:before {
+		content: "\f00c";
+		color: $clear;
+		font-size: 13px;
+		font-family: 'Font Awesome 5 Regular';
+		padding: 1px 2px 0px 3px;
+		transition: color 300ms ease-in-out;
+	}
+	&:checked + label:before {
+		color: $action-color;
+	}
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto 30px;
+	@media screen and (min-width: 1260px) {
+		margin: auto;
+	}
+}
+
+.component.intro {
+	position: relative;
+	z-index: 10;
+	.wrapper {
+		margin: auto;
+	}
+}
+
+.inner-wrapper {
+	max-width: 900px;
+	margin: auto;
+}

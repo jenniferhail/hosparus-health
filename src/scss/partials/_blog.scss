@@ -1,0 +1,45 @@
+body.page-template-blog {
+	.layout.blog-filters {
+		margin-bottom: 100px;
+	}
+	.blog-wrapper,
+	.facet-query {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 500ms linear;
+		&.hide {
+			visibility: hidden;
+		    opacity: 0;
+		    transition: visibility 0s 500ms, opacity 500ms linear;
+		}
+	}
+
+	.blog-wrapper {
+		.blog-inner {
+			margin-top: 0;
+		}
+		&.hide {
+			overflow: hidden;
+			margin-bottom: 0;
+			.blog-inner {
+				margin-top: -10000px;
+				transition: margin-top 0s 500ms;
+			}
+		}
+	}
+
+	.facet-query {
+		.wrapper {
+			margin-top: 0;
+		}
+		&.hide {
+			overflow: hidden;
+			margin-bottom: 0;
+			.wrapper {
+				margin-top: -10000px;
+				transition: margin-top 0s 500ms;
+			}
+		}
+	}
+
+}

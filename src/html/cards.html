@@ -1,0 +1,59 @@
+@@include('inc/header.html')
+
+<div id="app" class="page">
+
+	<section class="layout cards background col-2 text-align-center">
+		<div class="component intro">
+			<div class="wrapper">
+				<h1 class="h2 subtitle">Cards: 2 Col & Text Center</h1>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content-wrapper">
+						<div class="description">
+							<div class="wrapper">
+								<p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+							</div>
+						</div>
+						<ul class="item-list">
+							<li class="item" v-for="n in 4">
+								@@include('layouts/card-item.html')
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="layout cards background col-3 text-align-left">
+		<div class="component intro">
+			<div class="wrapper">
+				<h1 class="h2 subtitle">Cards: 3 Col & Text Left</h1>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content-wrapper">
+						<div class="description">
+							<div class="wrapper">
+								<p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+							</div>
+						</div>
+						<ul class="item-list">
+							<li class="item" v-for="n in 4">
+								@@include('layouts/card-item.html')
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@@include('inc/footer.html')

@@ -1,0 +1,149 @@
+$_button-background-color: $action-color;
+$_button-background-color-hover: shade($action-color, 20%);
+
+#{$all-buttons} {
+	appearance: none;
+	// background-color: $_button-background-color;
+	border: 0;
+	border-bottom: $base-border;
+	border-radius: $base-border-radius;
+	color: $action-color;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $heading-font-family;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	padding: 8px 10px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color $base-duration $base-timing;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&:hover {
+		// background-color: $_button-background-color-hover;
+		// color: contrast-switch($_button-background-color-hover);
+	}
+
+	&:focus {
+		outline: $focus-outline;
+		outline-offset: $focus-outline-offset;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+		&:hover {
+			background-color: $_button-background-color;
+		}
+	}
+}
+
+.buttons {
+    display: flex;
+	align-items: center;
+	padding-top: 20px;
+	@media screen and (max-width: 759px) {
+		flex-direction: column;
+	}
+	&.center {
+		text-align: center;
+		justify-content: center;
+	}
+	&.pagination {
+		padding-top: 60px;
+	}
+	&.breadcrumb {
+		padding-top: 0;
+		margin-bottom: 80px;
+	}
+    .btn {
+		font-size: 20px;
+		font-family: $heading-font-family;
+		@include btn-draw($gold, $white, 1px);
+		@media screen and (max-width: 759px) {
+			margin-bottom: 15px;
+		}
+        &+.btn {
+			@media screen and (min-width: 760px) {
+				margin-left: 20px;
+			}
+        }
+    }
+}
+
+.facetwp-pager {
+	padding: 60px 0 0;
+	text-align: center;
+	.facetwp-page {
+		color: $base-font-color;
+		transition: color $base-duration $base-timing;
+		&.active,
+		&:hover {
+			color: $action-color;
+		}
+	}
+}
+
+.pagination {
+	width: 100%;
+	position: relative;
+	display: flex;
+	padding: 60px 0 0;
+	font-size: 20px;
+	&.center {
+		justify-content: center;
+		align-items: center;
+	}
+	.page-numbers {
+		padding: 10px;
+		color: $base-font-color;
+		&:hover {
+			color: $action-color;
+		}
+		&.current {
+			color: $action-color;
+		}
+	}
+	.arrow {
+		position: relative;
+		bottom: 5px;
+		width: 16px;
+		height: 28px;
+		font-size: 0;
+		line-height: 0;
+	    border-bottom: 14px solid transparent;
+	    border-top: 14px solid transparent;
+		z-index: 9;
+		&:before {
+	        content: none;
+	    }
+	}
+	.arrow-right {
+		border-left: 16px solid $action-color;
+	}
+	.arrow-left {
+		border-right: 16px solid $action-color;
+	}
+}
+
+.btn-draw {
+	font-size: 20px;
+	font-family: $heading-font-family;
+	@include btn-draw($gold, $white, 1px);
+	&+.btn-draw {
+		margin-left: 20px;
+	}
+}
+
+.btn-draw-white {
+	font-size: 20px;
+	font-family: $heading-font-family;
+	@include btn-draw($white, $gold, 1px);
+	&+.btn-draw-white {
+		margin-left: 20px;
+	}
+}

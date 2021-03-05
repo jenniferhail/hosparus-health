@@ -1,0 +1,117 @@
+@@include('inc/header.html')
+
+<div id="app" class="page">
+
+	<!-- @@include('layouts/hero-style-3.html') -->
+	<section id="hero-style-3" class="layout hero style-3">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content-wrapper">
+						<div class="intro">
+							<h1 class="h1 title">A little compassion goes a long way.</h1>
+						</div>
+						<div class="image-wrapper">
+							<div class="background-image" style="background-image: url('https://via.placeholder.com/630x450');">
+								<img class="visually-hide-image" src="https://via.placeholder.com/630x450" alt="">
+							</div>
+						</div>
+						<div class="content">
+							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui.</p>
+								<div class="buttons">
+									<a class="btn" href="javascript:void(0)"><span>Donate</span></a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cards Section -->
+	<section id="cards-3" class="layout cards three-col background">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="intro">
+						<h1 class="h2 title">Giving Opportunities</h1>
+					</div>
+					<div class="content-wrapper">
+						<p class="description">Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+						<ul class="item-list">
+							<li class="item" v-for="n in 8">
+								@@include('layouts/card-item.html')
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- @@include('layouts/hero-style-2.html') -->
+	<section id="hero-style-2" class="layout hero style-2">
+		<div class="wrapper">
+			<div class="row">
+				<div class="col">
+					<div class="content-wrapper">
+						<div class="intro">
+							<h1 class="h1 title">Your donation. Our impact.</h1>
+						</div>
+						<div class="image-wrapper">
+							<div class="background-image" style="background-image: url('https://via.placeholder.com/630x450');">
+								<img class="visually-hide-image" src="https://via.placeholder.com/630x450" alt="">
+							</div>
+						</div>
+						<div class="content">
+							<p>Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.</p>
+							<div class="buttons">
+								<a href="javascript:void(0)" class="btn"><span>View Report</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Article Slider -->
+	<!-- @@include('layouts/listing-article-slider.html') -->
+	<section id="listing-article-slider" class="layout listing article slider background story-line-bottom">
+		<div class="wrapper">
+			<div class="row">
+				<div class="intro">
+					<h1 class="h2 title">Get inspired.</h1>
+				</div>
+				<div class="glide-wrapper">
+					<div class="glide glide-1">
+						<div data-glide-el="track" class="glide__track">
+							<ul class="item-list glide__slides">
+								<li class="item glide__slide" v-for="n in 6">
+									@@include('layouts/article-item.html')
+								</li>
+							</ul>
+						</div>
+						<div class="glide__arrows" data-glide-el="controls">
+							<button class="glide__arrow glide__arrow--left" data-glide-dir="<"><span class="left-triangle"></span></button>
+							<button class="glide__arrow glide__arrow--right" data-glide-dir=">"><span class="right-triangle"></span></button>
+						</div>
+						<div class="glide__bullets" data-glide-el="controls[nav]">
+							<button class="glide__bullet" data-glide-dir="=0"></button>
+							<button class="glide__bullet" data-glide-dir="=1"></button>
+							<button class="glide__bullet" data-glide-dir="=2"></button>
+							<button class="glide__bullet" data-glide-dir="=3"></button>
+							<button class="glide__bullet" data-glide-dir="=4"></button>
+							<button class="glide__bullet" data-glide-dir="=5"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@@include('inc/footer.html')

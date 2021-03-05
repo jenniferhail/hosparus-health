@@ -1,0 +1,23 @@
+<section id="listing-event-list" class="layout listing event list">
+	<div class="wrapper">
+		<h2 class="style-title">Listing - Event (list)</h2>
+		<div class="rows">
+			<div class="col">
+				<div class="intro">
+					<h1 class="h2 subtitle">Location’s Events</h1>
+				</div>
+				<ul class="item-list">
+					<li class="item" v-for="n in 1">
+						@@include('listing-event-image.html')
+					</li>
+					<li class="item" v-for="n in 2">
+						@@include('listing-event.html')
+					</li>
+				</ul>
+				<div class="pagination buttons center">
+					<a class="btn" href="javascript:void(0)"><span>More Events</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

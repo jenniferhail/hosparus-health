@@ -1,0 +1,76 @@
+@@include('inc/header.html')
+
+<div id="app" class="page">
+
+	<section class="layout single article video">
+
+		<div class="wrapper">
+
+			<article class="row">
+
+				<div class="float">
+					<div class="image-wrapper">
+						<div class="background-image" style="background-image: url('assets/img/iStock-906043636.jpg');">
+							<img class="visually-hide-image" src="assets/img/iStock-906043636.jpg" alt="">
+							<div class="play-btn-wrapper">
+								<div class="play-btn-outer">
+									<div class="play-btn-inner">
+										<div class="play-btn">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="heading">
+					<ul class="details one-line">
+						<li><h1 class="h2 title">Video Title Will Be Placed Here.</h1></li>
+						<li><time datetime="2019-09-10" class="p">September 10, 2019</time></li>
+						<li><a href="javascript:void(0)" class="p">Author Name</a></li>
+						<li><a href="javascript:void(0)" class="p">Category Title</a></li>
+					</ul>
+				</div>
+
+				<div class="content">
+					<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<p>Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+
+			</article>
+
+			<div class="pagination buttons">
+				<a class="btn prev" href="javascript:void(0)"><span>Previous Article</span></a>
+				<ul class="social">
+					<li class="label">Share</li>
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				</ul>
+				<a class="btn next" href="javascript:void(0)"><span>Next Article</span></a>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- Related articles slider -->
+	<!-- @@include('layouts/listing-article-slider.html') -->
+	<section id="listing-article-slider" class="layout listing post carousel background story-line-bottom">
+		<div class="component intro">
+			<h1 class="h2 subtitle">Related Videos</h1>
+		</div>
+		<div class="wrapper">
+			<div class="row">
+				<div class="item-list">
+					<div class="item" v-for="n in 6">
+						@@include('layouts/article-item.html')
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+@@include('inc/footer.html')
